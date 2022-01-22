@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\{HomeController,CommunityController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +25,11 @@ Route::get('logout', [HomeController::class, 'logout'])->name('logout');
 Route::middleware('auth')->group(function () {
 
     Route::get('home', [HomeController::class, 'home'])->name('user.home');
+    Route::prefix('community/')->group(function () {
+        Route::get('/', [CommunityController::class, 'index'])->name('user.community');
+        Route::get('create', [CommunityController::class, 'create'])->name('user.community.create');
+        Route::get('edit/{id?}', [CommunityController::class, 'edit'])->name('user.community.edit');
+    });
+
+
 });

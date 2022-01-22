@@ -59,6 +59,8 @@
         }
     </style>
 @stack('custom-styles')
+    @livewireStyles
+
 </head>
 <body class="skin-green hold-transition sidebar-mini">
 <!-- Use this Layout when user Login -->
@@ -88,6 +90,7 @@
     <!-- /.content-wrapper -->
 
 </div>
+
 <!-- ./wrapper -->
 
 <!-- jQuery 3 -->
@@ -137,12 +140,13 @@
         iintegrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8= sha256-T+aPohYXbm0fRYDpJLr+zJ9RmYTswGsahAoIsNiMld4=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="{{ url('admin/plugins/select2/select2.full.min.js') }}"></script>
 
-<script type="text/javascript" src="{{ asset('vendor/jsvalidation/js/jsvalidation.js')}}"></script>
 
 <script>
     var base_url = '{{ url('/') }}';
 
 </script>
 @stack('custom-scripts')
+@livewireScripts
+
 </body>
 </html>

@@ -9,6 +9,12 @@
                     <span> Dashboard</span></a></li>
 
         </ul>
+        <ul class="sidebar-menu" data-widget="tree">
+            <li class="@if(request()->routeIs('user.community*')) active @endif"><a href="{{ route('user.community') }}">
+                    <i class="fa fa-comments"></i>
+                    <span> Community</span></a></li>
+
+        </ul>
     </section>
     <!-- /.sidebar -->
 </aside>
