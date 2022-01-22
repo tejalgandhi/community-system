@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/', [HomeController::class, 'index'])->name('login');
+Route::post('login', [HomeController::class, 'post_login'])->name('post.login');
+Route::get('logout', [HomeController::class, 'logout'])->name('logout');
