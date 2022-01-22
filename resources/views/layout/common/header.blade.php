@@ -1,12 +1,11 @@
 <header class="main-header">
     <!-- Logo -->
-    <a href="{{route('admin.home')}}" class="logo">
+    <a href="{{route('user.home')}}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini">CJ</span>
+        <span class="logo-mini">CM</span>
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg">
-{{--                Crazy Jalapeno--}}
-                <img src="{{ url('admin/dist/img/crazy.png') }}" class="login-logo-img">
+                Community
      </span>
 
     </a>
@@ -36,20 +35,11 @@
                             <img src="{{ url('admin/dist/img/user.png') }}" class="logo_img logo_img">
                             <p>
                                 {{Auth::User()->first_name }}{{Auth::User()->last_name }}
-                                <small>Super Admin</small>
                             </p>
                         </li>
                         <li class="user-body">
                             <div class="row">
-                                <div class="col-xs-4 text-center">
 
-                                    <a href="{{ route('admin.change-password') }}" class="btn btn-default btn-flat">Change Password</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="{{ route('admin.profile') }}" class="btn btn-default btn-flat">Profile</a>
-                                </div>
                             </div>
                             <!-- /.row -->
                         </li>
@@ -57,7 +47,7 @@
                         <li class="user-footer">
 
                             <div class="pull-right">
-                                <a href="{{ route('admin.logout') }}" class="btn btn-default btn-flat">Sign out</a>
+                                <a href="{{ route('logout') }}" class="btn btn-default btn-flat">Sign out</a>
                             </div>
                         </li>
                     </ul>

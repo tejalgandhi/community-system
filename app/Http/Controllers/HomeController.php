@@ -40,7 +40,7 @@ class HomeController extends BaseController
                 $user = auth()->user();
                 Auth::login($user,true);
             }
-            return redirect()->route('home');
+            return redirect()->route('user.home');
         }
         else
         {
@@ -60,7 +60,7 @@ class HomeController extends BaseController
     }
 
     public function home(){
-        return view('home');
+        return view('user.home');
     }
 
 
