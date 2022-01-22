@@ -1,0 +1,22 @@
+.invalid-feedback{
+    color:red;
+}
+.btn-default.btn-on-2.active{background-color: #00D590;color: white;}
+.btn-default.btn-off-2.active{background-color: #A7A7A7;color: white;}
+
+.login-logo-img{
+    height: 20%;
+    width: 50%;
+}
+
+
+li{
+list-style: none !important;
+}
+
+.canvas-container{
+height: 500px;
+}
+table.dataTable thead .sorting_asc:after{
+content:none !important;
+}
