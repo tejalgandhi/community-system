@@ -1,5 +1,5 @@
 @extends('layout.app_with_login')
-@section('title','Category Management')
+@section('title','Community Management')
 @section('content')
     <section class="content">
         @livewire('community.index')

@@ -38,6 +38,7 @@ class Create extends Component
         $this->question =  Question::where('id',$this->question_id)->first();
     }
 
+    //create or update community question or answer
     public function store()
     {
         try {
@@ -59,11 +60,13 @@ class Create extends Component
         }
     }
 
+    // confirmation delete for popup
     public function isConfirmDelete($id,$is_question=false){
         $this->is_confirm_delete = $id;
         $this->is_question = $is_question;
     }
 
+    //delete action after confirmation
     public function deleteAnswer($id,$is_question = false){
         try {
             Question::where('id',$id)->delete();
@@ -76,6 +79,7 @@ class Create extends Component
         }
     }
 
+    //edit question or answer display in field
     public function edit($id){
         $question =  Question::where('id',$id)->first();
         $this->title = $question->title;

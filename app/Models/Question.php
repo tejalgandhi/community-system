@@ -28,5 +28,14 @@ class Question extends Model
         return $this->belongsTo(User::class, 'created_by');
     }
 
+    public function likes()
+    {
+        return $this->hasMany(QuestionLike::class, 'question_id');
+    }
+    public function user_like()
+    {
+        return $this->belongsTo(QuestionLike::class, 'question_id');
+    }
+
 
 }
