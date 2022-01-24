@@ -70,9 +70,13 @@ class Create extends Component
     public function deleteAnswer($id,$is_question = false){
         try {
             Question::where('id',$id)->delete();
+            $this->is_confirm_delete = false;
+            $this->is_question = false;
+            $this->resetInput();
             if($is_question){
                 return route('user.community.index');
             }
+
             session()->flash('success', 'Answer deleted successfully.');
         } catch (\Exception $e) {
             session()->flash('error', $e->getMessage());

@@ -110,7 +110,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default pull-left" data-dismiss="modal" wire:click="$set('is_confirm_delete', false)">Close</button>
-                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="button" class="btn btn-danger" wire:click="deleteAnswer({{$this->is_confirm_delete}},{{ $this->is_question}})">Delete</button>
                 </div>
             </div>
             <!-- /.modal-content -->
