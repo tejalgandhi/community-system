@@ -29,7 +29,7 @@
                                  <p>
 
                                     <a wire:click="like({{$popular_question->id}})">
-                                         <i class="{{getLike($popular_question->id)?'fa fa-thumbs-up':'fa fa-thumbs-o-down'}}"
+                                         <i class="{{getLike($popular_question->id)?'fa fa-thumbs-up':'fa fa-thumbs-o-up'}}"
                                             aria-hidden="true"></i>
                                          ({{$popular_question->likes_count}})
                                     </a>
@@ -77,9 +77,17 @@
                                         <span class="username">
                           <a href="{{route('user.community.edit',$new_question->id)}}">{{$new_question->title}}</a>
 
-                                <p>
+                                <p>̥
                                   {{$new_question->content}}
                                 </p>
+                                              <p>
+
+                                    <a wire:click="like({{$new_question->id}})">
+                                         <i class="{{getLike($new_question->id)?'fa fa-thumbs-up':'fa fa-thumbs-o-up'}}"
+                                            aria-hidden="true"></i>
+                                         ({{$new_question->likes_count}})
+                                    </a>
+                                 </p>
                                 <ul class="list-inline">
                                     <li><a href="#" class="link-black text-sm">Created By: {{$new_question->user->name}}</li>
                                     </li>
@@ -126,6 +134,14 @@
                                 <p>
                                   {{$follow_question->content}}
                                 </p>
+                                  <p>
+
+                                    <a wire:click="like({{$follow_question->id}})">
+                                         <i class="{{getLike($follow_question->id)?'fa fa-thumbs-up':'fa fa-thumbs-o-up'}}"
+                                            aria-hidden="true"></i>
+                                         ({{$follow_question->likes_count}})
+                                    </a>
+                                 </p>
                                 <ul class="list-inline">
                                     <li><a href="#" class="link-black text-sm">Created By: {{$follow_question->user->name}}</li>
                                     </li>
